@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: ons_raw
+    description: data from ons
+    tables:
+      - name: _datasets
+      - name: _dataset_keywords
+      - name: _dataset_methodology
+      - name: _dataset_relations
+      - name: _dataset_contacts

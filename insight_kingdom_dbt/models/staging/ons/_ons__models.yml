@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_ons__datasets
+    description: Metadata from ONS describing each dataset
+  - name: stg_ons__dataset_keywords
+    description: Keywords tagged on each dataset. Relates to _datasets.
+  - name: stg_ons__dataset_methodology
+    description: The ONS methodology for each dataset. Relates to _datasets.
+  - name: stg_ons__dataset_relations
+    description: Related datasets as detailed by ONS. Relates to _datasets.
+  - name: stg_ons__dataset_contacts
+    description: The key contact at ONS for the dataset. Relates to _datasets.
