@@ -1,0 +1,7 @@
+import ons_import_raw_metadata
+
+ons_import_raw_metadata.import_datasets()
+ons_import_raw_metadata.import_dataset_contacts()
+ons_import_raw_metadata.import_dataset_keywords()
+ons_import_raw_metadata.import_dataset_relations()
+ons_import_raw_metadata.import_dataset_methodology()
