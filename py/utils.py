@@ -36,24 +36,18 @@ def sql_runner(cursor, sql, sql_tag):
 
     date_time_obj = datetime.now()
 
-    print(f'Execution of {sql_tag}, starting at {date_time_obj}')
-
     try:
+
+        print(f'Execution of {sql_tag}, starting at {date_time_obj}')
+
         cursor.execute(sql)
 
         date_time_obj = datetime.now()
+
         print(f'Execution of {sql_tag} successful, completed at {date_time_obj}')
 
     except:
 
         print(f'Failed to run {sql_tag}')
 
-    return cursor.fetchone()
-
-cur = db_cursor()
-
-result = sql_runner(cur,'SELECT 1','Test')
-
-print(result)
-
-cur.close()
+    return cursor.statusmessage
