@@ -134,18 +134,18 @@ for file in data['payload']:
 
     file_df = pd.DataFrame(data['payload'][file])
 
-    file_df.to_csv(file_path + file + '_' + rundate + '.csv', index=False)
+    file_df.to_csv(file_path + 'metadata/' + file + '_' + rundate + '.csv', index=False)
 
-for dataset in data['payload']['datasets']:
-
-    download_url = dataset['dataset_download_url']
-    name = dataset['dataset_id']
-
-    dataset_download = requests.get(download_url)
-
-    file_object = io.StringIO(dataset_download.content.decode('utf-8'))
-
-    data_df = pd.read_csv(file_object)
-
-    data_df.to_csv(file_path + name + '_' + rundate + '.csv', index=False)
-
+# for dataset in data['payload']['datasets']:
+#
+#     download_url = dataset['dataset_download_url']
+#     name = dataset['dataset_id']
+#
+#     dataset_download = requests.get(download_url)
+#
+#     file_object = io.StringIO(dataset_download.content.decode('utf-8'))
+#
+#     data_df = pd.read_csv(file_object)
+#
+#     data_df.to_csv(file_path + name + '_' + rundate + '.csv', index=False)
+#
