@@ -1,5 +1,16 @@
 import psycopg2
 from datetime import datetime
+import csv
+
+def create_csv_from_list(list,csv_keys,csv_path,csv_name):
+
+    with open(csv_path + csv_name, 'w', newline='') as output_file:
+        dict_writer = csv.DictWriter(output_file, csv_keys)
+        dict_writer.writeheader()
+        dict_writer.writerows(list)
+
+    print("Success {0} created!".format(csv_name))
+
 
 def db_cursor():
 
