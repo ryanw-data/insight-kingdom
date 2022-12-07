@@ -3,6 +3,36 @@ version: 2
 models:
   - name: stg_ons__datasets
     description: Metadata from ONS describing each dataset
+    columns:
+      - name: dataset_collection_id
+      - name: dataset_id
+        description: Unique reference for the dataset used across versions and releases
+      - name: dataset_title
+        description: Short title for the dataset
+      - name: dataset_description
+        description: Long description for the dataset
+      - name: dataset_state
+      - name: dataset_release_date
+      - name: dataset_next_release_date_original
+      - name: dataset_next_release_date
+      - name: dataset_release_frequency
+      - name: dataset_national_statistic_original
+      - name: dataset_national_statistic
+      - name: dataset_type
+      - name: dataset_editions_link
+      - name: dataset_latest_version_link
+      - name: dataset_latest_version_id
+      - name: dataset_download_url
+      - name: dataset_self_link
+      - name: dataset_taxonomy_link
+      - name: dataset_quality_methodology_information_link
+      - name: dataset_publications
+      - name: dataset_unit_of_measure
+      - name: dataset_licence
+      - name: dataset_usage_notes
+
+
+
   - name: stg_ons__dataset_keywords
     description: Keywords tagged on each dataset. Relates to _datasets.
   - name: stg_ons__dataset_methodology

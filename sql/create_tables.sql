@@ -1,7 +1,9 @@
+--
 CREATE DATABASE development;
 
 \connect development;
 
+--
 CREATE SCHEMA IF NOT EXISTS ons_raw;
 
 CREATE TABLE IF NOT EXISTS ons_raw._datasets
@@ -55,4 +57,31 @@ CREATE TABLE IF NOT EXISTS ons_raw._dataset_relations
     dataset_id VARCHAR,
 	related_dataset_url	VARCHAR,
 	related_dataset_title VARCHAR
+);
+
+--
+CREATE SCHEMA IF NOT EXISTS police_uk_raw;
+
+CREATE TABLE IF NOT EXISTS police_uk_raw.forces
+(
+    id VARCHAR,
+	name VARCHAR,
+	description VARCHAR,
+	url VARCHAR,
+	telephone VARCHAR,
+	_created_at VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS police_uk_raw.neighbourhoods
+(
+    force_id VARCHAR,
+	id VARCHAR,
+	name VARCHAR,
+	description VARCHAR,
+	url_force VARCHAR,
+	population VARCHAR,
+	locations VARCHAR,
+	boundary VARCHAR,
+	contact_details VARCHAR,
+	_created_at VARCHAR
 );
