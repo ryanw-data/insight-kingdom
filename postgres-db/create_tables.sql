@@ -3,6 +3,8 @@ CREATE DATABASE development;
 
 \connect development;
 
+CREATE EXTENSION postgis;
+
 --
 CREATE SCHEMA IF NOT EXISTS ons_raw;
 

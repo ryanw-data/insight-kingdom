@@ -4,12 +4,14 @@ services:
 
   postgres:
     container_name: postgres_container
-    image: postgres
+    build:
+      context: .
+      dockerfile: Dockerfile-db
     environment:
       POSTGRES_PASSWORD: password
     volumes:
        - ../data:/pgData/
-       - ../sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+       - ./create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
     ports:
       - "5432:5432"
     networks:
